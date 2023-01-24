@@ -40,10 +40,16 @@ h1 {
   height: auto;
   margin-bottom: 10px;
 }
+.table {
+  font-size: 20px;
+}
+table, td, th {
+  border: 2px solid blue;
+}
 
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+}
 
-// width: 30%;
-// text-align: center;
-// padding: 20px;
-// border: 1px solid gray;
-// margin-bottom: 20px;

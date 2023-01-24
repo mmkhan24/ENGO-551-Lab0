@@ -44,4 +44,18 @@ h1 {
   width: 100%;
   height: auto;
   margin-bottom: 10px;
+}
+
+.table {
+  font-size: 20px;
+}
+
+table, td, th {
+  border: 2px solid blue;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
 }/*# sourceMappingURL=style.css.map */
