@@ -5,7 +5,12 @@ body {
 }
 h1 {
   text-align: center;
+  color: #0d0d0d;
+}
+.welcome_prompt_txt {
+  text-align: center;
   color: #0c2bdc;
+  font-size: 1.2em;
 }
 .Fitness_txt {
   /* styles go here */
@@ -25,31 +30,160 @@ h1 {
   font-size: 1.5em;
   text-decoration: none;    
 }
-.Fitness_Pic {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-.Travel_Pic {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-.Music_Pic {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-.table {
-  font-size: 20px;
-}
+
 table, td, th {
   border: 2px solid blue;
 }
 
-@media only screen and (max-width: 600px) {
-    body {
-      background-color: lightblue;
+//Stying header 2 and table using nesting scss code:  
+h2 {
+    text-align: center;
+    font-size: 1.0rem;
+    margin-bottom: 1rem;
+  }
+h3 {
+    text-align: center;
+    font-size: 1.0rem;
+    margin-bottom: 1rem;
+  }  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    thead {
+      th {
+        background-color: #ddd;
+        font-size: 1.2rem;
+        text-align: left;
+        padding: 8px;
+      }
     }
-}
+    tbody {
+      tr {
+        background-color: #f2f2f2;
+        td {
+          font-size: 1.1rem;
+          padding: 8px;
+        }
+      }
+    }
+  }
 
+//   Styling header 1 and selections using nesting code in scss:
+body {
+    h1 {
+      text-align: center;
+      font-size: 4rem;
+      color: #d9a413;
+      margin-bottom: 1rem;
+    }
+    .welcome-prompt {
+      text-align: center;
+      .welcome_prompt_txt {
+        font-size: 1.2rem;
+      }
+    }
+    .interests {
+      display: flex;
+      justify-content: space-between;
+      .interest_Fitness,
+      .interest_Travel,
+      .interest_Music {
+        text-align: center;
+        a {
+          font-size: 1.5rem;
+          text-decoration: none;
+          color: black;
+        }
+        img {
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      li {
+        a {
+          font-size: 1.2rem;
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+  
+  // Styled the pictures in fitness, travel and music section using inheritance scss code:
+  .Fitness_Pic1,
+  .Fitness_Pic2,
+  .Fitness_Pic3 {
+    width: 300px;
+    height: 200px;
+    margin: 1rem;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      li {
+        a {
+          font-size: 1.2rem;
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+  
+  .Music_Pic1,
+  .Music_Pic2,
+  .Music_Pic3 {
+    width: 300px;
+    height: 200px;
+    margin: 1rem;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      li {
+        a {
+          font-size: 1.2rem;
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+  
+  .Travel_Pic1,
+  .Travel_Pic2,
+  .Travel_Pic3 {
+    width: 300px;
+    height: 200px;
+    margin: 1rem;
+  }
+
+
+@media only screen and (max-width: 600px) {
+    /* styles for screens smaller than 600px */
+    thead {
+      th {
+        font-size: 1rem;
+      }
+    }
+    tbody {
+      td {
+        font-size: 0.9rem;
+      }
+    }
+  }
